@@ -10,11 +10,9 @@ interface AITool {
 }
 
 const prompts = [
-  "Ghibli Village Dreamscape – Transform the photo into a cozy Ghibli-style village with warm lighting, charming houses, and lush greenery.",
+  "Universal - Transform this photo into a Ghibli-style artwork.",
   "Spirit of the Forest – Add magical forest elements, floating spirit creatures, and glowing fireflies around the subject.",
   "Windy Fields Adventure – Place the subject in a vast, rolling field with golden wheat, blue skies, and a nostalgic breeze.",
-  "Mysterious Bathhouse – Convert the background into a grand, mystical bathhouse like in Spirited Away, with glowing lanterns and steam.",
-  "Floating Island Fantasy – Set the scene in the sky with floating islands, flying machines, and soft, pastel clouds.",
   "Ghibli Night Market – Fill the scene with a bustling, lantern-lit market with stalls selling mysterious, whimsical goods."
 ];
 
