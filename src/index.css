@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Ghibli:wght@400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Ghibli', sans-serif;
+  background-color: #f4f1de;
+}
+
+.ghibli-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.ghibli-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(61, 64, 91, 0.2),
+    rgba(244, 241, 222, 1)
+  );
+}
+
+.text-shadow-ghibli {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
