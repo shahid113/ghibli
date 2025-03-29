@@ -16,7 +16,7 @@ export default {
         ghibli: ['Ghibli', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('images/coverg.jpeg')",
+        'hero-pattern': "url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj-PxxaH6jKQxD-V_dxQcXGrZer5YBp-oAuu66BssHZ__fy99rhqIgQaVE6I6k1FAoIVIHaGXUL2Bnlep9vJZZbQUpLBDFaXTd4FT__vreA-d0a7ZyqNEnigkvC5CdlBjW_u4eCTxPigUjGdnLLFcNIb_8g_rLKxT_Stda-DdjXzU5bwSb-osBHewhyphenhyphendw/s1500/139475.jpeg')",
       },
     },
   },
