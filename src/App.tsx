@@ -13,18 +13,49 @@ const prompts = [
   "Universal - Transform this photo into a Ghibli-style artwork.",
   "Spirit of the Forest – Add magical forest elements, floating spirit creatures, and glowing fireflies around the subject.",
   "Windy Fields Adventure – Place the subject in a vast, rolling field with golden wheat, blue skies, and a nostalgic breeze.",
-  "Ghibli Night Market – Fill the scene with a bustling, lantern-lit market with stalls selling mysterious, whimsical goods."
 ];
 
 
-const aiTools: AITool[] = [
+const aiTools = [
+  {
+    name: "getimg.ai",
+    description: "Platform that enables users to transform text prompts into Studio Ghibli-inspired images or apply the Ghibli style to photos.",
+    link: "https://getimg.ai/models/ghibli-diffusion",
+    difficulty: "Beginner",
+    price: "Free (100 images/month) / Paid plans available",
+    tips: prompts
+  },
+  {
+    name: "OpenArt Studio Ghibli Generator",
+    description: "AI tool that creates enchanting Studio Ghibli-inspired scenes from text prompts.",
+    link: "https://openart.ai/generator/studio-ghibli",
+    difficulty: "Beginner",
+    price: "Free",
+    tips: prompts
+  },
+  {
+    name: "insMind Studio Ghibli Filter",
+    description: "Free AI generator that converts photos into Ghibli-style artwork.",
+    link: "https://www.insmind.com/studio-ghibli-filter/",
+    difficulty: "Beginner",
+    price: "Free",
+    tips: prompts
+  },
+  {
+    name: "Fotor Studio Ghibli Filter",
+    description: "Online tool that applies a Studio Ghibli filter to images, transforming them into Ghibli-style art.",
+    link: "https://www.fotor.com/features/studio-ghibli-filter/",
+    difficulty: "Beginner",
+    price: "Free",
+    tips: prompts
+  },
   {
     name: "Grok",
     description: "X (formerly Twitter) AI model designed for advanced text and image generation with a deep understanding of creative styles.",
     link: "https://grok.com",
     difficulty: "Intermediate",
     price: "Included with X Premium+",
-    tips:prompts
+    tips: prompts
   },
   {
     name: "ChatGPT (DALL-E 3)",
@@ -32,15 +63,40 @@ const aiTools: AITool[] = [
     link: "https://openai.com/chatgpt",
     difficulty: "Beginner",
     price: "Free (with limitations) / Paid (Pro users get enhanced access)",
-    tips:prompts
+    tips: prompts
   },
+  
   {
     name: "Deep Dream Generator",
     description: "A free AI image generator by Google that creates dreamlike, surreal images based on input photos.",
     link: "https://deepdreamgenerator.com",
     difficulty: "Beginner",
     price: "Free (limited features) / Paid plans available",
-    tips:prompts
+    tips: prompts
+  },
+  {
+    name: "DeepAI Text-to-Image",
+    description: "A free AI tool that generates images based on text descriptions.",
+    link: "https://deepai.org/machine-learning-model/text2img",
+    difficulty: "Beginner",
+    price: "Free (with limited generations per day)",
+    tips: prompts
+  },
+  {
+    name: "Runway ML",
+    description: "An AI-powered creative suite that offers text-to-image generation and video AI tools.",
+    link: "https://runwayml.com",
+    difficulty: "Intermediate",
+    price: "Free (with limited features) / Paid plans available",
+    tips: prompts
+  },
+  {
+    name: "Canva Text to Image",
+    description: "User-friendly AI image generator integrated into Canva, great for creating AI-generated social media content.",
+    link: "https://www.canva.com",
+    difficulty: "Beginner",
+    price: "Included with Canva Pro",
+    tips: prompts
   },
   {
     name: "Pixray",
@@ -56,7 +112,7 @@ const aiTools: AITool[] = [
     link: "https://dream.ai",
     difficulty: "Beginner",
     price: "Free (with in-app purchases for extra features)",
-    tips:prompts
+    tips: prompts
   },
   {
     name: "Stable Diffusion",
@@ -64,7 +120,7 @@ const aiTools: AITool[] = [
     link: "https://stability.ai",
     difficulty: "Advanced",
     price: "Free (self-hosted) / Paid services available",
-    tips:prompts
+    tips: prompts
   },
   {
     name: "Leonardo.ai",
@@ -72,33 +128,10 @@ const aiTools: AITool[] = [
     link: "https://leonardo.ai",
     difficulty: "Intermediate",
     price: "Free tier with paid options",
-    tips:prompts
+    tips: prompts
   },
-  {
-    name: "DeepAI Text-to-Image",
-    description: "A free AI tool that generates images based on text descriptions.",
-    link: "https://deepai.org/machine-learning-model/text2img",
-    difficulty: "Beginner",
-    price: "Free (with limited generations per day)",
-    tips:prompts
-  },
-  {
-    name: "Runway ML",
-    description: "An AI-powered creative suite that offers text-to-image generation and video AI tools.",
-    link: "https://runwayml.com",
-    difficulty: "Intermediate",
-    price: "Free (with limited features) / Paid plans available",
-    tips:prompts
-  },
-  {
-    name: "Canva Text to Image",
-    description: "User-friendly AI image generator integrated into Canva, great for creating AI-generated social media content.",
-    link: "https://www.canva.com",
-    difficulty: "Beginner",
-    price: "Included with Canva Pro",
-    tips:prompts
-  }
 ];
+
 
 function App() {
   return (
