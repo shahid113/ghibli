@@ -16,7 +16,7 @@ export default {
         ghibli: ['Ghibli', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-pattern': "url('https://images.unsplash.com/photo-1578632292335-df3abbb0d586?auto=format&fit=crop&w=2000')",
+        'hero-pattern': "url('images/coverg.jpeg')",
       },
     },
   },

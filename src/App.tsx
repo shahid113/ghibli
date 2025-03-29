@@ -138,14 +138,7 @@ function App() {
     <div className="min-h-screen bg-ghibli-cream font-ghibli">
       {/* Hero Section */}
       <header className="relative h-[70vh] overflow-hidden">
-        <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center">
-          <div className="absolute inset-0 hero-overlay" />
-        </div>
-        <div className="absolute top-0 left-0 w-full h-full">
-          <Cloud className="text-white/30 w-24 h-24 absolute top-20 left-[10%] floating" style={{animationDelay: '0s'}} />
-          <Cloud className="text-white/30 w-16 h-16 absolute top-40 right-[20%] floating" style={{animationDelay: '0.5s'}} />
-          <Cloud className="text-white/30 w-20 h-20 absolute top-60 left-[30%] floating" style={{animationDelay: '1s'}} />
-        </div>
+        <div className="absolute inset-0 bg-hero-pattern bg-cover bg-center"></div>
         <div className="relative h-full flex items-center justify-center">
           <div className="text-center px-4 floating" style={{animationDelay: '0.3s'}}>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 text-shadow-ghibli">
