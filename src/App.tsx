@@ -9,6 +9,16 @@ interface AITool {
   tips: string[];
 }
 
+const prompts = [
+  "Ghibli Village Dreamscape – Transform the photo into a cozy Ghibli-style village with warm lighting, charming houses, and lush greenery.",
+  "Spirit of the Forest – Add magical forest elements, floating spirit creatures, and glowing fireflies around the subject.",
+  "Windy Fields Adventure – Place the subject in a vast, rolling field with golden wheat, blue skies, and a nostalgic breeze.",
+  "Mysterious Bathhouse – Convert the background into a grand, mystical bathhouse like in Spirited Away, with glowing lanterns and steam.",
+  "Floating Island Fantasy – Set the scene in the sky with floating islands, flying machines, and soft, pastel clouds.",
+  "Ghibli Night Market – Fill the scene with a bustling, lantern-lit market with stalls selling mysterious, whimsical goods."
+];
+
+
 const aiTools: AITool[] = [
   {
     name: "Grok",
@@ -16,12 +26,7 @@ const aiTools: AITool[] = [
     link: "https://grok.com",
     difficulty: "Intermediate",
     price: "Included with X Premium+",
-    tips: [
-      "Use conversational prompts for natural image variations",
-      "Leverage multi-modal capabilities for text and images",
-      "Experiment with storytelling-based prompts",
-      "Combine Grok’s AI-generated content with external editing tools"
-    ]
+    tips:prompts
   },
   {
     name: "ChatGPT (DALL-E 3)",
@@ -29,12 +34,7 @@ const aiTools: AITool[] = [
     link: "https://openai.com/chatgpt",
     difficulty: "Beginner",
     price: "Free (with limitations) / Paid (Pro users get enhanced access)",
-    tips: [
-      "Use highly detailed prompts for precise results",
-      "Leverage inpainting for modifications and refinements",
-      "Experiment with different styles like oil painting or digital art",
-      "Combine text and image generation for interactive storytelling"
-    ]
+    tips:prompts
   },
   {
     name: "Deep Dream Generator",
@@ -42,12 +42,7 @@ const aiTools: AITool[] = [
     link: "https://deepdreamgenerator.com",
     difficulty: "Beginner",
     price: "Free (limited features) / Paid plans available",
-    tips: [
-      "Upload a base image for transformation",
-      "Experiment with different artistic filters",
-      "Use high-resolution images for better results",
-      "Try dream mode for abstract effects"
-    ]
+    tips:prompts
   },
   {
     name: "Pixray",
@@ -55,12 +50,7 @@ const aiTools: AITool[] = [
     link: "https://pixray.gob.io",
     difficulty: "Beginner",
     price: "Free",
-    tips: [
-      "Use detailed prompts for better accuracy",
-      "Experiment with different AI settings like pixel art or abstract styles",
-      "Try customizing the AI rendering engine",
-      "Export images in high resolution"
-    ]
+    tips: prompts
   },
   {
     name: "Dream by Wombo",
@@ -68,12 +58,7 @@ const aiTools: AITool[] = [
     link: "https://dream.ai",
     difficulty: "Beginner",
     price: "Free (with in-app purchases for extra features)",
-    tips: [
-      "Select different art styles like fantasy, anime, or abstract",
-      "Use short, clear prompts for more accurate images",
-      "Combine multiple prompts to refine the output",
-      "Try the animation feature for dynamic effects"
-    ]
+    tips:prompts
   },
   {
     name: "Stable Diffusion",
@@ -81,12 +66,7 @@ const aiTools: AITool[] = [
     link: "https://stability.ai",
     difficulty: "Advanced",
     price: "Free (self-hosted) / Paid services available",
-    tips: [
-      "Use the 'anything-v4.5' or 'Waifu Diffusion' model",
-      "Experiment with negative prompts to avoid unwanted styles",
-      "Try LoRA models specifically trained on Ghibli artwork",
-      "Use the 'Studio Ghibli' checkpoint for better results"
-    ]
+    tips:prompts
   },
   {
     name: "Leonardo.ai",
@@ -94,12 +74,7 @@ const aiTools: AITool[] = [
     link: "https://leonardo.ai",
     difficulty: "Intermediate",
     price: "Free tier with paid options",
-    tips: [
-      "Use the anime-specific models as a base",
-      "Combine with watercolor and traditional animation styles",
-      "Experiment with the custom model feature",
-      "Focus on lighting and color grading"
-    ]
+    tips:prompts
   },
   {
     name: "DeepAI Text-to-Image",
@@ -107,12 +82,7 @@ const aiTools: AITool[] = [
     link: "https://deepai.org/machine-learning-model/text2img",
     difficulty: "Beginner",
     price: "Free (with limited generations per day)",
-    tips: [
-      "Use precise text descriptions",
-      "Try different styles like fantasy, realistic, or anime",
-      "Refine outputs by slightly modifying your prompts",
-      "Upgrade to paid for HD images"
-    ]
+    tips:prompts
   },
   {
     name: "Runway ML",
@@ -120,12 +90,7 @@ const aiTools: AITool[] = [
     link: "https://runwayml.com",
     difficulty: "Intermediate",
     price: "Free (with limited features) / Paid plans available",
-    tips: [
-      "Use text descriptions for creative AI art",
-      "Experiment with AI-powered video and image editing",
-      "Combine multiple AI models for better results",
-      "Leverage Runway ML's community for inspiration"
-    ]
+    tips:prompts
   },
   {
     name: "Canva Text to Image",
@@ -133,12 +98,7 @@ const aiTools: AITool[] = [
     link: "https://www.canva.com",
     difficulty: "Beginner",
     price: "Included with Canva Pro",
-    tips: [
-      "Combine with Canva's editing tools",
-      "Use the 'Anime' and 'Watercolor' style options",
-      "Add text overlays in unique AI-generated fonts",
-      "Export in high resolution for best quality"
-    ]
+    tips:prompts
   }
 ];
 
@@ -250,7 +210,7 @@ function App() {
                 <div className="border-t border-gray-200 pt-6">
                   <h4 className="font-semibold text-ghibli-navy mb-4 flex items-center text-lg">
                     <Leaf className="h-5 w-5 mr-2 text-ghibli-sage" />
-                    Tips
+                    Useful Prompts
                   </h4>
                   <ul className="space-y-3 text-gray-700">
                     {tool.tips.map((tip, index) => (
