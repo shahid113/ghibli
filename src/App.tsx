@@ -1,4 +1,3 @@
-import React from 'react';
 import { Sparkles, Palette, ExternalLink, Leaf, Wind, Wand2, BookOpen, Camera, Cloud, Sun, Moon } from 'lucide-react';
 
 interface AITool {
@@ -12,21 +11,73 @@ interface AITool {
 
 const aiTools: AITool[] = [
   {
-    name: "Midjourney",
-    description: "One of the most popular AI image generators that can create Ghibli-style artwork using specific prompts. Known for its high-quality artistic outputs.",
-    link: "https://www.midjourney.com",
+    name: "Grok",
+    description: "X (formerly Twitter) AI model designed for advanced text and image generation with a deep understanding of creative styles.",
+    link: "https://grok.com",
     difficulty: "Intermediate",
-    price: "Paid (Starting at $10/month)",
+    price: "Included with X Premium+",
     tips: [
-      "Use prompts like 'Studio Ghibli style, anime watercolor, Miyazaki inspired'",
-      "Add keywords like 'painterly, soft lighting, whimsical'",
-      "Include nature elements like 'floating islands, magical forest'",
-      "Specify 'hand-drawn animation style, cel shaded'"
+      "Use conversational prompts for natural image variations",
+      "Leverage multi-modal capabilities for text and images",
+      "Experiment with storytelling-based prompts",
+      "Combine Grok’s AI-generated content with external editing tools"
+    ]
+  },
+  {
+    name: "ChatGPT (DALL-E 3)",
+    description: "OpenAI’s advanced AI model capable of generating high-quality images based on detailed textual descriptions.",
+    link: "https://openai.com/chatgpt",
+    difficulty: "Beginner",
+    price: "Free (with limitations) / Paid (Pro users get enhanced access)",
+    tips: [
+      "Use highly detailed prompts for precise results",
+      "Leverage inpainting for modifications and refinements",
+      "Experiment with different styles like oil painting or digital art",
+      "Combine text and image generation for interactive storytelling"
+    ]
+  },
+  {
+    name: "Deep Dream Generator",
+    description: "A free AI image generator by Google that creates dreamlike, surreal images based on input photos.",
+    link: "https://deepdreamgenerator.com",
+    difficulty: "Beginner",
+    price: "Free (limited features) / Paid plans available",
+    tips: [
+      "Upload a base image for transformation",
+      "Experiment with different artistic filters",
+      "Use high-resolution images for better results",
+      "Try dream mode for abstract effects"
+    ]
+  },
+  {
+    name: "Pixray",
+    description: "A free AI art generator that allows users to create unique digital artwork from text descriptions.",
+    link: "https://pixray.gob.io",
+    difficulty: "Beginner",
+    price: "Free",
+    tips: [
+      "Use detailed prompts for better accuracy",
+      "Experiment with different AI settings like pixel art or abstract styles",
+      "Try customizing the AI rendering engine",
+      "Export images in high resolution"
+    ]
+  },
+  {
+    name: "Dream by Wombo",
+    description: "A free AI-powered image generator that creates stunning digital paintings from text prompts.",
+    link: "https://dream.ai",
+    difficulty: "Beginner",
+    price: "Free (with in-app purchases for extra features)",
+    tips: [
+      "Select different art styles like fantasy, anime, or abstract",
+      "Use short, clear prompts for more accurate images",
+      "Combine multiple prompts to refine the output",
+      "Try the animation feature for dynamic effects"
     ]
   },
   {
     name: "Stable Diffusion",
-    description: "Open-source AI model that can be fine-tuned for Ghibli-style generation. Offers great flexibility and control over the output.",
+    description: "Open-source AI model that can be fine-tuned for various artistic styles, including Ghibli-style images.",
     link: "https://stability.ai",
     difficulty: "Advanced",
     price: "Free (self-hosted) / Paid services available",
@@ -38,34 +89,8 @@ const aiTools: AITool[] = [
     ]
   },
   {
-    name: "PhotoRoom",
-    description: "AI photo editor with anime and Ghibli-style filters. Perfect for beginners wanting to transform existing photos.",
-    link: "https://www.photoroom.com",
-    difficulty: "Beginner",
-    price: "Free tier available",
-    tips: [
-      "Start with high-quality, well-lit photos",
-      "Use the anime filter as a base",
-      "Adjust colors to match Ghibli's pastel palette",
-      "Fine-tune the watercolor effects"
-    ]
-  },
-  {
-    name: "DALL-E 3",
-    description: "OpenAI's latest image generation model with excellent understanding of the Ghibli art style and composition.",
-    link: "https://openai.com/dall-e-3",
-    difficulty: "Beginner",
-    price: "Paid (Credits system)",
-    tips: [
-      "Use detailed descriptions of Ghibli-specific elements",
-      "Mention 'hand-painted animation style'",
-      "Reference specific Ghibli movies for style",
-      "Include atmospheric details like 'morning mist' or 'golden hour'"
-    ]
-  },
-  {
     name: "Leonardo.ai",
-    description: "AI platform with custom models and fine-tuning capabilities, perfect for creating consistent Ghibli-style artwork.",
+    description: "AI platform with custom models and fine-tuning capabilities, perfect for creating consistent digital artwork.",
     link: "https://leonardo.ai",
     difficulty: "Intermediate",
     price: "Free tier with paid options",
@@ -77,15 +102,41 @@ const aiTools: AITool[] = [
     ]
   },
   {
+    name: "DeepAI Text-to-Image",
+    description: "A free AI tool that generates images based on text descriptions.",
+    link: "https://deepai.org/machine-learning-model/text2img",
+    difficulty: "Beginner",
+    price: "Free (with limited generations per day)",
+    tips: [
+      "Use precise text descriptions",
+      "Try different styles like fantasy, realistic, or anime",
+      "Refine outputs by slightly modifying your prompts",
+      "Upgrade to paid for HD images"
+    ]
+  },
+  {
+    name: "Runway ML",
+    description: "An AI-powered creative suite that offers text-to-image generation and video AI tools.",
+    link: "https://runwayml.com",
+    difficulty: "Intermediate",
+    price: "Free (with limited features) / Paid plans available",
+    tips: [
+      "Use text descriptions for creative AI art",
+      "Experiment with AI-powered video and image editing",
+      "Combine multiple AI models for better results",
+      "Leverage Runway ML's community for inspiration"
+    ]
+  },
+  {
     name: "Canva Text to Image",
-    description: "User-friendly AI image generator integrated into Canva, great for creating Ghibli-inspired social media content.",
+    description: "User-friendly AI image generator integrated into Canva, great for creating AI-generated social media content.",
     link: "https://www.canva.com",
     difficulty: "Beginner",
     price: "Included with Canva Pro",
     tips: [
       "Combine with Canva's editing tools",
       "Use the 'Anime' and 'Watercolor' style options",
-      "Add text overlays in Ghibli-inspired fonts",
+      "Add text overlays in unique AI-generated fonts",
       "Export in high resolution for best quality"
     ]
   }
