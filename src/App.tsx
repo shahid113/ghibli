@@ -1,4 +1,6 @@
 import { Sparkles, Palette, ExternalLink, Leaf, Wind, Wand2, BookOpen, Camera, Cloud, Sun, Moon } from 'lucide-react';
+import BannerAd from './Banner';
+import Popup from './popup';
 
 interface AITool {
   name: string;
@@ -152,8 +154,16 @@ function App() {
         </div>
       </header>
 
+      {/* Popup component with options */}
+      <Popup 
+        delay={2000} // Show popup after 2 seconds
+        autoClose={15000} // Auto close after 15 seconds (optional)
+      />
+
+      <BannerAd/>
+
       {/* Introduction Section */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="relative overflow-hidden">
         <div className="max-w-6xl mx-auto px-4">
           <div className="ghibli-card rounded-2xl p-10">
             <h2 className="text-4xl font-bold text-ghibli-navy mb-10 flex items-center">
@@ -199,9 +209,9 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* AI Tools Section */}
-      <main className="max-w-6xl mx-auto px-4 py-12">
+      <BannerAd/>
+    {/* AI Tools Section */}
+      <main className="max-w-6xl mx-auto px-4 py-8">
         <section className="mb-20">
           <h2 className="text-4xl font-bold text-ghibli-navy mb-12 flex items-center">
             <Palette className="mr-3 h-8 w-8 text-ghibli-rust" />
@@ -249,6 +259,8 @@ function App() {
             ))}
           </div>
         </section>
+
+        <BannerAd/>
 
         {/* Prompt Engineering Section */}
         <section className="ghibli-card rounded-2xl p-10 mb-20">
